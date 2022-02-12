@@ -20,6 +20,6 @@ its a bash script that uses tools to get Subdomains and send notfication in disc
   ```
 
 # Note 
-**it will make a dir in ~/hunt where it will store its result and ALSO PLEASE DONT FORGET to remove my webhook and add yours and your user id also :)**
+**it will make a dir in ~/hunt where it will store its output and ALSO PLEASE DONT FORGET to remove my webhook and add yours and your user id also :)**
 
 ###### the code is very simple you can add or remove any thing ☺
