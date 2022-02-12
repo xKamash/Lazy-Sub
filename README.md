@@ -17,6 +17,7 @@ its a bash script that uses tools to get Subdomains and send notfication in disc
   $ cd Lazy-Sub
   $ sudo chmod +x Lazysub.sh
   $ cp Lazysub.sh /usr/local/bin/Lazysub 
+  $ . Lazysub
   ```
 
 # Note 
