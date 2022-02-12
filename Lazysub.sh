@@ -17,7 +17,7 @@ reset=`tput sgr0`
 # ----------------------------------------------User input ----------------------------------------
 
 
-read -p "Enter the targer  name : " DDR
+read -p "Enter the program name : " DDR
 
 mkdir -p  ~/hunt/$DDR/subs
 mkdir ~/hunt/$DDR/vuln
@@ -34,9 +34,10 @@ cd ~/hunt/$DDR/subs
 
   message="Starting KamashR <@378583599592505344>"
   msg_content=\"$message\"
-  url=webhook_url
+  url='https://discord.com/api/webhooks/942161829604503602/owSazFmPinc5PUzAb_dj8xkEJccrm4yFrKbRtJ9oBFB6U6dXOz9QswT-4Rhoo8Kn69J6'
   curl -H "Content-Type: application/json" -X POST -d "{\"content\": $msg_content}" $url
-
+  echo "${red} [-] All the output will be stored at  ~/hunt/$DDR/${reset}"
+echo " "
 echo "${blue} [+] Started Subdomain Enumeration ${reset}"
 echo " "
 
@@ -48,10 +49,11 @@ echo "${magenta} [+] Running Assetfinder for subdomain enumeration${reset}"
 	cat $WLD1 | assetfinder --subs-only  | anew ~/hunt/$DDR/subs/subdomains.txt
   echo $GOOOD "findings : "
   wc -l subdomains.txt
+  
   echo $GOOOD"----------------------------------------------------------------------"
   message="Finished Assetfinder <@378583599592505344>"
   msg_content=\"$message\"
-  url='https://discord.com/api/webhooks/938863456583561246/pzdLxbqTI-HlgewHky-DGQ5fB7H4GwxvFxbSOZt1dE4aaOZN9F6i2lFxfy3sPXTn_NCe'
+  url='https://discord.com/api/webhooks/942161829604503602/owSazFmPinc5PUzAb_dj8xkEJccrm4yFrKbRtJ9oBFB6U6dXOz9QswT-4Rhoo8Kn69J6'
   curl -H "Content-Type: application/json" -X POST -d "{\"content\": $msg_content}" $url
 
 echo " "
@@ -68,7 +70,7 @@ echo "${magenta} [+] Running Subfinder for subdomain enumeration${reset}"
   echo $GOOOD"----------------------------------------------------------------------"
   message="Finished subfinder <@378583599592505344>"
   msg_content=\"$message\"
-  url='https://discord.com/api/webhooks/938863456583561246/pzdLxbqTI-HlgewHky-DGQ5fB7H4GwxvFxbSOZt1dE4aaOZN9F6i2lFxfy3sPXTn_NCe'
+  url='https://discord.com/api/webhooks/942161829604503602/owSazFmPinc5PUzAb_dj8xkEJccrm4yFrKbRtJ9oBFB6U6dXOz9QswT-4Rhoo8Kn69J6'
   curl -H "Content-Type: application/json" -X POST -d "{\"content\": $msg_content}" $url
 echo " "
 echo "${blue} [+] Succesfully saved as subdomains.txt  ${reset}"
@@ -90,7 +92,7 @@ echo $GOOOD "findings : "
   rm amass.txt
     message="Finished Amass <@378583599592505344>"
   msg_content=\"$message\"
-  url='https://discord.com/api/webhooks/938863456583561246/pzdLxbqTI-HlgewHky-DGQ5fB7H4GwxvFxbSOZt1dE4aaOZN9F6i2lFxfy3sPXTn_NCe'
+  url='https://discord.com/api/webhooks/942161829604503602/owSazFmPinc5PUzAb_dj8xkEJccrm4yFrKbRtJ9oBFB6U6dXOz9QswT-4Rhoo8Kn69J6'
   curl -H "Content-Type: application/json" -X POST -d "{\"content\": $msg_content}" $url
 echo " "
 echo "${blue} [+] Succesfully saved as amass.txt  ${reset}"
@@ -109,7 +111,7 @@ echo " "
 # else
   message="Finished Pulling Ip and filtering <@378583599592505344>"
   msg_content=\"$message\"
-  url='https://discord.com/api/webhooks/938863456583561246/pzdLxbqTI-HlgewHky-DGQ5fB7H4GwxvFxbSOZt1dE4aaOZN9F6i2lFxfy3sPXTn_NCe'
+  url='https://discord.com/api/webhooks/942161829604503602/owSazFmPinc5PUzAb_dj8xkEJccrm4yFrKbRtJ9oBFB6U6dXOz9QswT-4Rhoo8Kn69J6'
   curl -H "Content-Type: application/json" -X POST -d "{\"content\": $msg_content}" $url
 echo " "
 echo "${blue} [+] Succesfully anewed in subdomains.txt  ${reset}"
@@ -131,7 +133,7 @@ echo $GOOOD "findings : "
   echo $GOOOD"----------------------------------------------------------------------"# else
     message="Finished HTTPX <@378583599592505344>"
   msg_content=\"$message\"
-  url='https://discord.com/api/webhooks/938863456583561246/pzdLxbqTI-HlgewHky-DGQ5fB7H4GwxvFxbSOZt1dE4aaOZN9F6i2lFxfy3sPXTn_NCe'
+  url='https://discord.com/api/webhooks/942161829604503602/owSazFmPinc5PUzAb_dj8xkEJccrm4yFrKbRtJ9oBFB6U6dXOz9QswT-4Rhoo8Kn69J6'
   curl -H "Content-Type: application/json" -X POST -d "{\"content\": $msg_content}" $url
 echo " "
 echo "${blue} [+] Succesfully saved livesubs.txt  ${reset}"
@@ -146,7 +148,7 @@ echo " "
   cat subdomains.txt | httpx  -sc -td -cl -server -title -location -method -ip -o infosubs.txt
     message="Finished Detail HTTPX <@378583599592505344>"
   msg_content=\"$message\"
-  url='https://discord.com/api/webhooks/938863456583561246/pzdLxbqTI-HlgewHky-DGQ5fB7H4GwxvFxbSOZt1dE4aaOZN9F6i2lFxfy3sPXTn_NCe'
+  url='https://discord.com/api/webhooks/942161829604503602/owSazFmPinc5PUzAb_dj8xkEJccrm4yFrKbRtJ9oBFB6U6dXOz9QswT-4Rhoo8Kn69J6'
   curl -H "Content-Type: application/json" -X POST -d "{\"content\": $msg_content}" $url
 echo " "
 echo "${blue} [+] Succesfully saved as infosubs.txt  ${reset}"
@@ -164,7 +166,7 @@ echo " "
    nuclei -l livesubs.txt -o ../nuclei/out1.txt
      message="Finished Nuclei <@378583599592505344>"
   msg_content=\"$message\"
-  url='https://discord.com/api/webhooks/938863456583561246/pzdLxbqTI-HlgewHky-DGQ5fB7H4GwxvFxbSOZt1dE4aaOZN9F6i2lFxfy3sPXTn_NCe'
+  url='https://discord.com/api/webhooks/942161829604503602/owSazFmPinc5PUzAb_dj8xkEJccrm4yFrKbRtJ9oBFB6U6dXOz9QswT-4Rhoo8Kn69J6'
   curl -H "Content-Type: application/json" -X POST -d "{\"content\": $msg_content}" $url
 echo " "
 echo "${blue} [+] Succesfully saved as out1.txt  ${reset}"
